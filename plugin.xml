@@ -5,9 +5,6 @@
         <clobbers target="atmosphereplugin" />
     </js-module>
     
-    
-    <dependency id="cordova-plugin-add-swift-support" version="1.7.2" />
-
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
             <feature name="AtmospherePlugin">
@@ -38,9 +35,7 @@
         
         <resource-file src="src/ios/Resources/icon-close.svg" />
         <resource-file src="src/ios/Resources/icon-close.pdf" />
-
         
-        
-        
+        <dependency id="cordova-plugin-add-swift-support" version="1.7.2" />
     </platform>
 </plugin>
