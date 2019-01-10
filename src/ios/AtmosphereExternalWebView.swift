@@ -1,7 +1,6 @@
 import UIKit
 import WebKit
 
-@available(iOS 11.0, *)
 class AtmosphereExternalWebView: UIViewController, WKNavigationDelegate {
     
     var urlLoading : String?
@@ -48,19 +47,19 @@ class AtmosphereExternalWebView: UIViewController, WKNavigationDelegate {
         
         self.view.addSubview(webView!)
         
-        if #available(iOS 11.0, *) {
-            let safeGuide = self.view.safeAreaLayoutGuide
-            
-            
-            webView?.translatesAutoresizingMaskIntoConstraints = false
-            webView?.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-            webView?.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-            
-            webView?.bottomAnchor.constraint(equalTo: bottomBar.topAnchor).isActive = true
-            webView?.topAnchor.constraint(equalTo: toolBar.bottomAnchor).isActive = true
-        } else {
-            // Fallback on earlier versions
-        }
+        //if #available(iOS 11.0, *) {
+        //let safeGuide = self.view.safeAreaLayoutGuide
+        
+        
+        webView?.translatesAutoresizingMaskIntoConstraints = false
+        webView?.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        webView?.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        
+        webView?.bottomAnchor.constraint(equalTo: bottomBar.topAnchor).isActive = true
+        webView?.topAnchor.constraint(equalTo: toolBar.bottomAnchor).isActive = true
+        //} else {
+        // Fallback on earlier versions
+        //}
         
         refreshButtonsState()
         
@@ -233,18 +232,18 @@ class AtmosphereExternalWebView: UIViewController, WKNavigationDelegate {
         
         self.view.addSubview(toolBar)
         
-        if #available(iOS 11.0, *) {
-            let safeGuide = self.view.safeAreaLayoutGuide
-            toolBar.translatesAutoresizingMaskIntoConstraints = false
-            
-            toolBar.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-            toolBar.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-            toolBar.topAnchor.constraint(equalTo: safeGuide.topAnchor).isActive = true
-            toolBar.heightAnchor.constraint(equalToConstant: 50).isActive = true
-            
-        } else {
-            // Fallback on earlier versions
-        }
+        //if #available(iOS 11.0, *) {
+        //let safeGuide = self.view.safeAreaLayoutGuide
+        toolBar.translatesAutoresizingMaskIntoConstraints = false
+        
+        toolBar.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        toolBar.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        toolBar.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        toolBar.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        //} else {
+        // Fallback on earlier versions
+        //}
         
         
         
